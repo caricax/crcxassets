@@ -37,7 +37,7 @@ describe('DEFAULT_CARICAX_BRANDING_CONF', () => {
         for (const link of DEFAULT_CARICAX_BRANDING_CONF.legalLinks) {
             expect(link.label).toBeTruthy();
             expect(link.href).toBeTruthy();
-            expect(link.href).toStartWith('/');
+            expect(link.href.startsWith('/')).toBeTrue();
         }
     });
 });
