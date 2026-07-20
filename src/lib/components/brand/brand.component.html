@@ -1,0 +1,13 @@
+<div class="crcx-brand" aria-label="Caricax">
+    <img
+        class="crcx-logo"
+        [src]="logoSrc"
+        [alt]="alt"
+        width="32"
+        height="32"
+        decoding="async"
+        loading="lazy"
+        (error)="onLogoError($event)"
+        />
+    <span class="crcx-brand-text">{{ label }}</span>
+</div>

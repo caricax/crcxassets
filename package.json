@@ -1,0 +1,33 @@
+{
+  "name": "@caricax/branding",
+  "version": "0.1.0",
+  "description": "Caricax IT branding components — logo and footer for Angular applications.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caricax/branding"
+  },
+  "author": {
+    "name": "kernelpenguin",
+    "email": "kernelpenguin@caricax.com"
+  },
+  "contributors": [
+    {
+      "name": "avilatab",
+      "role": "designer"
+    }
+  ],
+  "keywords": [
+    "caricax",
+    "branding",
+    "angular",
+    "logo",
+    "footer",
+    "lgpd",
+    "gdpr"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=17.0.0",
+    "@angular/common": ">=17.0.0"
+  }
+}

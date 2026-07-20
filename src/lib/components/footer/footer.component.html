@@ -1,0 +1,35 @@
+<div class="crcx-footer">
+    <div class="crcx-container">
+        <div>
+            @if (vm.logoSrc) {
+                <crcx-brand
+                    [logoSrc]="vm.logoSrc"
+                    [fallbackLogoSrc]="vm.logoFallbackSrc ?? ''"
+                    [alt]="vm.companyName"
+                    [label]="vm.companyName"
+                />
+            }
+            <div class="crcx-copy crcx-muted">
+                <p>&copy; {{ vm.years }} {{ vm.companyName }}. {{ vm.licenseLabel }}.</p>
+                @for (line of vm.locationLines; track line) {
+                    <p>{{ line }}</p>
+                }
+            </div>
+        </div>
+        <div>
+            <h3 class="crcx-heading">{{ vm.legalTitle }}</h3>
+            <ul class="crcx-list">
+                @for (link of vm.legalLinks; track trackByLabel($index, link)) {
+                    <li>
+                        <a
+                            class="crcx-legal-link"
+                            [href]="link.href"
+                            [attr.target]="link.external ? '_blank' : undefined"
+                            [attr.rel]="link.external ? 'noopener noreferrer' : undefined"
+                        >{{ link.label }}</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
